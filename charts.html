@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charts - Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Charts</h1>
+
+    <!-- Filters -->
+    <div class="filters">
+      <select id="filter-category">
+        <option value="all">All Categories</option>
+        <option value="Food">Food</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Bills">Bills</option>
+        <option value="Salary">Salary</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="from-date">From:</label>
+      <input type="date" id="from-date" />
+      <label for="to-date">To:</label>
+      <input type="date" id="to-date" />
+      <button id="update-btn">Update Charts</button>
+    </div>
+
+    <!-- Charts -->
+    <div class="charts-container">
+      <div class="chart-box">
+        <h3>Expenses by Category</h3>
+        <canvas id="expenseChart"></canvas>
+      </div>
+      <div class="chart-box">
+        <h3>Income vs Expenses</h3>
+        <canvas id="incomeExpenseChart"></canvas>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:20px;">
+      <button onclick="window.location.href='index.html'">Back to Dashboard</button>
+    </div>
+  </div>
+
+  <script src="charts.js"></script>
+</body>
+</html>
